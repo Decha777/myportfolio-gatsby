@@ -1,36 +1,45 @@
+/**
+ * Configure your Gatsby site with this file.
+ *
+ * See: https://www.gatsbyjs.org/docs/gatsby-config/
+ */
+
 module.exports = {
   siteMetadata: {
-    title: "npm i strapi-provider-upload-cloudinary",
+    title: "WebDev Portfolio",
+    description: "This is WebDev Portfolio Site",
+    author: "@webdev",
+    twitterUsername: "@john_smilga",
+    image: "/twitter-img.png",
+    siteUrl: "https://testing-strapi-gatsby-build.netlify.app",
   },
   plugins: [
     "gatsby-plugin-styled-components",
-    "gatsby-plugin-sharp",
-    "gatsby-plugin-react-helmet",
-    "gatsby-plugin-sitemap",
     "gatsby-plugin-offline",
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sitemap`,
     {
-      resolve: "gatsby-plugin-manifest",
+      resolve: `gatsby-source-filesystem`,
       options: {
-        icon: "src/images/icon.png",
+        name: `assets`,
+        path: `${__dirname}/src/assets/`,
       },
     },
-    "gatsby-plugin-mdx",
-    "gatsby-transformer-sharp",
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: `gatsby-source-strapi`,
       options: {
-        name: "images",
-        path: "./src/images/",
+        // apiURL:`http://localhost:1337`,
+        apiURL: process.env.DEPLOY_URL
+          ? `https://decha77-api.herokuapp.com`
+          : `http://localhost:1337`,
+        queryLimit: 1000, // Default to 100
+        // contentTypes: [`jobs`, `projects`, `blogs`, ],
+        //singleTypes:[`about` ]
+        contentTypes: [`jobs`, `projects`, `blogs`],
+        singleTypes: [`about`],
       },
-      __key: "images",
-    },
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: "pages",
-        path: "./src/pages/",
-      },
-      __key: "pages",
     },
   ],
-};
+}
