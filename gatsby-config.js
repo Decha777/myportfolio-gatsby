@@ -6,16 +6,16 @@
 
 module.exports = {
   siteMetadata: {
-    title: "WebDev Portfolio",
-    description: "This is WebDev Portfolio Site",
-    author: "@webdev",
+    title: "Decha Portfolio",
+    description: "This is Decha's Portfolio Site",
+    author: "@Decha777",
     twitterUsername: "@john_smilga",
     image: "/twitter-img.png",
     siteUrl: "https://testing-strapi-gatsby-build.netlify.app",
   },
   plugins: [
-    "gatsby-plugin-styled-components",
-    "gatsby-plugin-offline",
+    `gatsby-plugin-styled-components`,
+    `gatsby-plugin-offline`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-react-helmet`,
@@ -30,13 +30,10 @@ module.exports = {
     {
       resolve: `gatsby-source-strapi`,
       options: {
-        // apiURL:`http://localhost:1337`,
         apiURL: process.env.DEPLOY_URL
           ? `https://decha77-api.herokuapp.com`
           : `http://localhost:1337`,
         queryLimit: 1000, // Default to 100
-        // contentTypes: [`jobs`, `projects`, `blogs`, ],
-        //singleTypes:[`about` ]
         contentTypes: [`jobs`, `projects`, `blogs`],
         singleTypes: [`about`],
       },
