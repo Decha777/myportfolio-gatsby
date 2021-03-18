@@ -14,7 +14,7 @@ const query = graphql`
         position
         desc {
           id
-          title
+          title:info
         }
       }
     }

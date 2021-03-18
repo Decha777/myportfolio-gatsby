@@ -42,7 +42,7 @@ export const query = graphql`
         }
         stack {
           id
-          title
+          title:info
         }
       }
     }

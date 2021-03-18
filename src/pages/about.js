@@ -38,7 +38,7 @@ export const query = graphql`
       nodes {
         stack {
           id
-          title
+          title:info
         }
         title
         info
