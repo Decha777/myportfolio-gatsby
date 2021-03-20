@@ -9,8 +9,6 @@ module.exports = {
     title: "Decha Portfolio",
     description: "This is Decha's Portfolio Site",
     author: "@Decha777",
-    twitterUsername: "@john_smilga",
-    image: "/twitter-img.png",
     siteUrl: "https://decha.netlify.app",
   },
   plugins: [
