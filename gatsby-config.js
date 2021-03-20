@@ -31,7 +31,7 @@ module.exports = {
       resolve: `gatsby-source-strapi`,
       options: {
          apiURL : `https://decha777-portfolio-api.herokuapp.com`,
-        // apiURL: `http://localhost:1337/`,
+        // apiURL: `http://localhost:1337`,
         // apiURL: process.env.DEPLOY_URL
         //   ? `https://decha77-api.herokuapp.com`
         //   : `http://localhost:1337`,
