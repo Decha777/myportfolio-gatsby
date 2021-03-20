@@ -11,7 +11,7 @@ module.exports = {
     author: "@Decha777",
     twitterUsername: "@john_smilga",
     image: "/twitter-img.png",
-    siteUrl: "https://testing-strapi-gatsby-build.netlify.app",
+    siteUrl: "https://decha.netlify.app",
   },
   plugins: [
     `gatsby-plugin-styled-components`,
