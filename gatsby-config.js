@@ -9,7 +9,7 @@ module.exports = {
     title: "Decha Portfolio",
     description: "This is Decha's Portfolio Site",
     author: "@Decha777",
-    siteUrl: "https://decha.netlify.app",
+    // siteUrl: "https://decha.netlify.app",
   },
   plugins: [
     `gatsby-plugin-styled-components`,
