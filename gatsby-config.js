@@ -26,13 +26,17 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        icon: `${__dirname}/src/assets/logo.svg`,
+      },
+    },
+    {
       resolve: `gatsby-source-strapi`,
       options: {
-         apiURL : `https://decha777-portfolio-api.herokuapp.com`,
+        apiURL: `https://decha777-portfolio-api.herokuapp.com`,
         // apiURL: `http://localhost:1337`,
-        // apiURL: process.env.DEPLOY_URL
-        //   ? `https://decha77-api.herokuapp.com`
-        //   : `http://localhost:1337`,
+
         queryLimit: 1000, // Default to 100
         contentTypes: [`jobs`, `projects`, `blogs`],
         singleTypes: [`about`],

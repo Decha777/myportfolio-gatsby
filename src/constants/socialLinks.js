@@ -1,37 +1,26 @@
 import React from "react"
 import {
-  FaFacebookSquare,
+  FaGithubSquare,
   FaLinkedin,
-  FaCodepen,
-  FaInstagramSquare,
   FaTelegram
 } from "react-icons/fa"
 
 const data = [
+
   {
     id: 1,
-    icon: <FaFacebookSquare className="social-icon"></FaFacebookSquare>,
-    url: "https://www.twitter.com",
+    icon: <FaLinkedin className="social-icon"></FaLinkedin>,
+    url: "https://www.linkedin.com/in/gib-ash-3bab151a0/",
   },
   {
     id: 2,
-    icon: <FaLinkedin className="social-icon"></FaLinkedin>,
-    url: "https://www.twitter.com",
+    icon: <FaTelegram className="social-icon"></FaTelegram>,
+    url: "https://t.me/Decha777",
   },
   {
     id: 3,
-    icon: <FaTelegram className="social-icon"></FaTelegram>,
-    url: "https://www.twitter.com",
-  },
-  {
-    id: 4,
-    icon: <FaInstagramSquare className="social-icon"></FaInstagramSquare>,
-    url: "https://www.twitter.com",
-  },
-  {
-    id: 5,
-    icon: <FaCodepen className="social-icon"></FaCodepen>,
-    url: "https://www.twitter.com",
+    icon: <FaGithubSquare className="social-icon"></FaGithubSquare>,
+    url: "https://github.com/Decha777",
   },
 ]
 const links = data.map(link => {

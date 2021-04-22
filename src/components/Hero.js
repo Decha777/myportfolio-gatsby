@@ -27,12 +27,12 @@ const Hero = () => {
         <article className="hero-info">
           <div>
             <div className="underline"></div>
-            <h1>i'm Decha</h1>
-            <h4>freelance web designer and developer</h4>
-            <SocialLinks />
+            <h1>Hello World, i'm <span>Decha</span></h1>
+            <h4>web designer/developer</h4>
             <Link to="/contact" className="btn">
               contact me
             </Link>
+            <SocialLinks />
           </div>
         </article>
         <Image fluid={fluid} className="hero-img" />
