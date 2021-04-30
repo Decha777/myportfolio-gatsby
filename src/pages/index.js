@@ -14,6 +14,7 @@ export default ({ data }) => {
   } = data
 
   return (
+  
     <Layout>
       <SEO title="Home" description="this is my home page" />
       <Hero />
